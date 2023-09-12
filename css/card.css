@@ -1,9 +1,16 @@
 body {
   margin: 20px;
+  justify-content: center;
+  display: grid;
+  h1, h2{
+    text-align: center;
+  }
 }
 #create {
   width: 50vw;
   max-width: 600px;
+  margin-left:auto;
+  margin-right: auto;
 }
 #card_image {
   margin: 25px;
@@ -25,6 +32,15 @@ footer {
 }
 button {
   display: block;
+}
+#preview_container{
+  justify-content: center;
+  display: grid;
+  #card_container{
+    max-width: 450px;
+    max-height: 540px;
+    width: 100%;
+  }
 }
 
 /* Larger than mobile screen */

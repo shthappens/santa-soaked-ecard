@@ -36,11 +36,11 @@ button {
 #preview_container{
   justify-content: center;
   display: grid;
-  #card_container{
+  /* #card_container{
     max-width: 450px;
     max-height: 540px;
     width: 100%;
-  }
+  } */
 }
 
 /* Larger than mobile screen */

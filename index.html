@@ -15,6 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/create.js" type="text/javascript"></script>
     <script src="js/jscolor.min.js" type="text/javascript"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
   </head>
 
   <body onload="load_ready()">
@@ -25,17 +28,17 @@
       <h2>Design Your Card</h2>
       <textarea id="message" rows=7 cols=20 placeholder="Write your message here." onchange="show_preview()" onkeyup="show_preview()"></textarea><br>
 
-      <input type="text" id="recipient" size="25" placeholder="Recipient" onchange="show_preview()" onkeyup="show_preview()"><br>
-      <input type="text" id="sender" size="25" placeholder="Sender" onchange="show_preview()" onkeyup="show_preview()"><br>
+      <input type="text" id="recipient" size="25" placeholder="To" onchange="show_preview()" onkeyup="show_preview()"><br>
+      <input type="text" id="sender" size="25" placeholder="From" onchange="show_preview()" onkeyup="show_preview()">
       <input type="text" id="image_url" size="25" placeholder="Image url" onchange="show_preview()" onkeyup="show_preview()"><br>
       <div id="select_ic">&nbsp;</div>
 
       <button
           class="jscolor {valueElement:'chosen_value',value:'FFF',onFineChange:'setTextColor(this)'}"
-          style="border:1px solid black;margin-right:5px">
+          style="border:1px solid black;margin-right:5px;display: none">
           Pick card background color
       </button>
-      HEX value: <span id="chosen_value">&nbsp;</span>
+      <span id="chosen_value" style="display: none">&nbsp;</span>
       <script>
         function setTextColor(picker) {
           document.getElementById('card_container').style.backgroundColor = '#' + picker.toString();
@@ -43,10 +46,10 @@
         }
       </script>
 
-      <div id="select_bg">&nbsp;</div>
+      <div id="select_bg" style="display: none">&nbsp;</div>
     </div>
 
-    <button type="button" onclick="toggle_preview()">Toggle preview</button> 
+    <!-- <button type="button" class="button preview" onclick="toggle_preview()">Toggle preview</button>  -->
     <!-- <label for="modal_1" class="button success">Import</label>  -->
     <label for="modal_2" class="button warning">Help</label>
 
@@ -86,8 +89,21 @@
       </article>
     </div>
 
-    <div id="card_url">&nbsp;</div>
+    <div id="card_url">
+      &nbsp;
+    </div>
+    <!-- <div id="facebook_url">
+      <a href="https://www.facebook.com/sharer/sharer.php?u=&nbsp;" target="_blank" rel="noopener noreferrer">
+        Share on Facebook
+      </a>
 
+    </div>
+    <div id=""twitter_url>
+      <a href="https://twitter.com/share?url=YOUR_PAGE_URL_HERE&text=Check%20out%20this%20awesome%20card%20generator" target="_blank" rel="noopener noreferrer">
+        Share on X/Twitter
+      </a>
+    </div> -->
+    
     <br>
     <div id="preview_container">
       <h2>Preview card</h2>
@@ -102,6 +118,7 @@
     </div>
     <footer>
       <!-- Source <a href="https://github.com/dohliam/ecards">available on GitHub</a>. -->
+      <a href="https://santasoaked.net/">Back to SantaSoaked.net</a>
     </footer>
   </body>
 </html>

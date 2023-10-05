@@ -58,10 +58,10 @@ body {
     padding: 0;
   }
 }
-#card_image {
+/* #card_image { */
   /* margin: 25px;
   width: 40vw; */
-}
+/* } */
 #card_container {
   /* border: 2px solid black; */
   width: 90vw;

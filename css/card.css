@@ -17,6 +17,16 @@ body h1{
   padding: 8px 16px;
 }
 
+body #instructions{
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body #instructions ol{
+  margin-top: 0;
+}
+
 body #card_url{
   margin: auto;
 }

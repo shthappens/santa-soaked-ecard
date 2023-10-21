@@ -15,12 +15,14 @@ function select_constructor(name, list) {
   if (name == "icon") { action = "load_image('icon'); show_preview();" }
   drop_down = '<select name="' + menu_name + '" id="' + menu_name + '" accesskey="' + initial + '" onchange="' + action + '">\n';
 
-  for (i = 0; i < list.length; i++) {
+  drop_down += '  <option value="Select Card">Select Card</option>\n';
+
+  for (i = 1; i < list.length; i++) {
     p = list[i];
     drop_down += '  <option value="' + p + '">' + p + '</option>\n';
   }
   drop_down += '</select>';
-  return drop_down;
+  return  drop_down;
 }
 
 function load_image(u) {

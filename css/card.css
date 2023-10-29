@@ -36,7 +36,7 @@ body button, body .warning, body .preview{
   border-radius: 48px;
   font-size: 16px;
   padding: 8px 16px;
-  width: 78px;
+  width: auto;
   margin: auto;
 }
 
@@ -45,8 +45,12 @@ body .warning{
   color: #000;
 }
 
-body .preivew{
+body .preview{
   color: #fff;
+}
+
+body .modal article section.content{
+  padding: .6em .8em;
 }
 
 #create {

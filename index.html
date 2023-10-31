@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
 
   <body onload="load_ready()">
@@ -104,6 +105,14 @@
     <div id="card_url">
       &nbsp;
     </div>
+
+    <button id="shortenButton">Shorten URL</button>
+    <script>
+      document.getElementById('shortenButton').addEventListener('click', shortenUrl);
+    </script>
+
+  <div id="shortened_url"></div>
+
     <br>
     <div id="preview_container">
       <h2>Preview card</h2>

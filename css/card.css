@@ -5,7 +5,7 @@ body {
   font-family: Lato, arial, sans-serif;
 }
 
-body h1, body h2{
+body h1, body h2, body h3{
   text-align: center;
 }
 
@@ -17,7 +17,7 @@ body h1{
   padding: 8px 16px;
 }
 
-body #instructions{
+body #instructions, body #about{
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -58,6 +58,14 @@ body .modal article section.content{
   max-width: 600px;
   margin-left:auto;
   margin-right: auto;
+}
+
+#create h2{
+  padding-bottom: 0;
+}
+
+#create h3{
+  padding-top: 0;
 }
 
 #create #message, #create #recipient, #create #sender, #create #select_ic{

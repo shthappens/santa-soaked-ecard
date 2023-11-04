@@ -119,7 +119,9 @@ function shortenUrl() {
       // Do something with the shortened URL, like displaying it on your page
       const shortenedUrlElement = document.getElementById("shortened_url");
       if (shortenedUrlElement) {
-        shortenedUrlElement.textContent = shortUrl;
+        // shortenedUrlElement.textContent = shortUrl;
+        shortenedUrlElement.href = shortUrl; // Update the href attribute with the shortened URL
+        shortenedUrlElement.textContent = shortUrl; // Display the shortened URL text
       }
     },
     error: function (error) {

@@ -27,7 +27,7 @@ body #instructions ol{
   margin-top: 0;
 }
 
-body #card_url{
+body #card_url, body #short_url{
   margin: auto;
 }
 

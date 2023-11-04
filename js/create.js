@@ -88,6 +88,8 @@ function show_preview() {
   recipient = "";
   if (r.value) { recipient = " - Send this to " + r.value + "!" }
   card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank">Shareable link to your card</a>' + recipient;
+
+  shortenUrl();
 }
 
 function import_card() {
@@ -108,7 +110,7 @@ function toggle_preview() {
 }
 
 function shortenUrl() {
-  const longUrl = document.getElementById('card_url').textContent;
+  const longUrl = document.getElementById('card_url').querySelector('a').getAttribute('href');
 
   $.ajax({
     url: 'http://tinyurl.com/api-create.php?url=' + encodeURIComponent(longUrl),

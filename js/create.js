@@ -113,7 +113,7 @@ function shortenUrl() {
   const longUrl = document.getElementById('card_url').querySelector('a').getAttribute('href');
 
   $.ajax({
-    url: 'http://tinyurl.com/api-create.php?url=' + encodeURIComponent(longUrl),
+    url: 'https://tinyurl.com/api-create.php?url=' + encodeURIComponent(longUrl),
     type: 'GET',
     success: function (shortUrl) {
       // Do something with the shortened URL, like displaying it on your page

@@ -87,7 +87,7 @@ function show_preview() {
 
   recipient = "";
   if (r.value) { recipient = " - Send this to " + r.value + "!" }
-  card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank">Shareable link to your card</a>' + recipient;
+  card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank" style="display: none;">Shareable link to your card</a>' + recipient;
 
   shortenUrl();
 }

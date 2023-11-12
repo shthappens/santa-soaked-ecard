@@ -53,8 +53,16 @@ body .modal article section.content{
   padding: .6em .8em;
 }
 
+#home-image{
+  background-image:  url("../Santa_Soaked_Promo.gif");
+  background-size: contain;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #create {
-  width: 50vw;
+  /* width: 50vw; */
   max-width: 600px;
   margin-left:auto;
   margin-right: auto;

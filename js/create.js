@@ -86,7 +86,7 @@ function show_preview() {
   query_string = '?i=' + ib64 + '&m=' + mb64 + '&bc=' + bc64 + '&bp=' + bp64 + '&rb=' + rb64 + '&sb=' + sb64;
 
   recipient = "";
-  if (r.value) { recipient = " - Send this to " + r.value + "!" }
+  if (r.value) { recipient = " Send this to " + r.value + "!" }
   card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank" style="display: none;">Shareable link to your card</a>' + recipient;
 
   shortenUrl();
@@ -130,6 +130,25 @@ function shortenUrl() {
     }
   });
 }
+
+// function copyToClipboard() {
+//   const shortenedUrlElement = document.getElementById("shortened_url");
+  
+//   // shortenedUrlElement.select();
+//   shortenedUrlElement.setSelectionRange(0, shortenedUrlElement.value.length);
+  
+//   try {
+//       navigator.clipboard.writeText(shortenedUrlElement.value)
+//           .then(() => {
+//               console.log("URL copied to clipboard");
+//           })
+//           .catch((err) => {
+//               console.error("Unable to copy URL to clipboard", err);
+//           });
+//   } catch (err) {
+//       console.error("Unable to copy URL to clipboard", err);
+//   }
+// }
 
 
 // icons_list = [ "Select Image", "art", "bike", "blimp", "bolt", "briefcase", "brightness", "calendar", "chat", "cloud", "computer", "contacts", "crossroads", "cruise", "denied", "door", "filmreel", "flame", "flower", "globe", "heart", "hotair", "hourglass", "image", "key", "locked", "magicwand", "mail", "map", "megaphone", "mic", "music", "parachute", "phone", "rocket", "sailboat", "shoeprints", "spaceshuttle", "star", "sub", "submarine", "traffic", "travelerbag", "trophy", "tv", "ufo", "umbrella", "video", "water", "weather" ]

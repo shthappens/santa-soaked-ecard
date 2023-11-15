@@ -86,7 +86,7 @@ function show_preview() {
   query_string = '?i=' + ib64 + '&m=' + mb64 + '&bc=' + bc64 + '&bp=' + bp64 + '&rb=' + rb64 + '&sb=' + sb64;
 
   recipient = "";
-  if (r.value) { recipient = " Send this to " + r.value + "!" }
+  if (r.value) { recipient = "Click the link to copy and send this to " + r.value + "!" }
   card_url.innerHTML = '<a href="' + receive + query_string + '" target="_blank" style="display: none;">Shareable link to your card</a>' + recipient;
 
   shortenUrl();

@@ -131,24 +131,21 @@ function shortenUrl() {
   });
 }
 
-// function copyToClipboard() {
-//   const shortenedUrlElement = document.getElementById("shortened_url");
-  
-//   // shortenedUrlElement.select();
-//   shortenedUrlElement.setSelectionRange(0, shortenedUrlElement.value.length);
-  
-//   try {
-//       navigator.clipboard.writeText(shortenedUrlElement.value)
-//           .then(() => {
-//               console.log("URL copied to clipboard");
-//           })
-//           .catch((err) => {
-//               console.error("Unable to copy URL to clipboard", err);
-//           });
-//   } catch (err) {
-//       console.error("Unable to copy URL to clipboard", err);
-//   }
-// }
+function copyToClipboard() {
+  const shortenedUrlElement = document.getElementById("shortened_url");
+
+  try {
+      navigator.clipboard.writeText(shortenedUrlElement.textContent)
+          .then(() => {
+              console.log("URL copied to clipboard");
+          })
+          .catch((err) => {
+              console.error("Unable to copy URL to clipboard", err);
+          });
+  } catch (err) {
+      console.error("Unable to copy URL to clipboard", err);
+  }
+}
 
 
 // icons_list = [ "Select Image", "art", "bike", "blimp", "bolt", "briefcase", "brightness", "calendar", "chat", "cloud", "computer", "contacts", "crossroads", "cruise", "denied", "door", "filmreel", "flame", "flower", "globe", "heart", "hotair", "hourglass", "image", "key", "locked", "magicwand", "mail", "map", "megaphone", "mic", "music", "parachute", "phone", "rocket", "sailboat", "shoeprints", "spaceshuttle", "star", "sub", "submarine", "traffic", "travelerbag", "trophy", "tv", "ufo", "umbrella", "video", "water", "weather" ]

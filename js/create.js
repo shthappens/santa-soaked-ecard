@@ -134,10 +134,14 @@ function shortenUrl() {
 function copyToClipboard() {
   const shortenedUrlElement = document.getElementById("shortened_url");
 
+  // Prevent the default behavior of the link
+  event.preventDefault();
+
   try {
       navigator.clipboard.writeText(shortenedUrlElement.textContent)
           .then(() => {
               console.log("URL copied to clipboard");
+              alert("Link copied!");
           })
           .catch((err) => {
               console.error("Unable to copy URL to clipboard", err);

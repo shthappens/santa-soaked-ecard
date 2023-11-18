@@ -27,7 +27,7 @@
     <h1>CREATE YOUR OWN SANTA SOAKED GIFTCARD</h1>
     <div id="about">
       <p>Santa Soaked is a much-needed climate update to the traditional tale. As his Arctic home melts, Santa seeks the reason why and finds a new mission.</p>
-        <p>Help Santa make the greatest gift of all - a better future for our children. Send this card to your friends! Find out more by visiting <a href="https://santasoaked.net">SantaSoaked.net</a>.</p>
+        <p>Help Santa make the greatest gift of all - a better future for our children. Send this card to your friends! Find out more by visiting <a href="https://santasoaked.net" target="_blank">SantaSoaked.net</a>.</p>
     </div>
     <div id="home-image"></div>
     <div id="create">
@@ -35,17 +35,18 @@
       <h3>Includes a link to <i>2023 Santa Soaked</i> eBook gift edition!</h3>
       <div id="instructions">
         <ol>
+          <li>Write your name, and who this is for.</li>
+          <li>Select your card from one of four.</li>
           <li>Write your message.</li>
-          <li>Add your name, and who this is for.</li>
-          <li>Pick your card. Select from one of four.</li>
           <li>Copy the shareable link to send by texting, social media, etc.</li>
         </ol>
       </div>
+
+      <input type="text" id="sender" size="25" placeholder="From" onchange="show_preview()" onkeyup="show_preview()">
+      <input type="text" id="recipient" size="25" placeholder="To" onchange="show_preview()" onkeyup="show_preview()"><br>
+      <input type="text" id="image_url" size="25" placeholder="Image url" onchange="show_preview()" onkeyup="show_preview()">
       <textarea id="message" rows=7 cols=20 placeholder="Write your message here." onchange="show_preview()" onkeyup="show_preview()"></textarea><br>
 
-      <input type="text" id="recipient" size="25" placeholder="To" onchange="show_preview()" onkeyup="show_preview()"><br>
-      <input type="text" id="sender" size="25" placeholder="From" onchange="show_preview()" onkeyup="show_preview()">
-      <input type="text" id="image_url" size="25" placeholder="Image url" onchange="show_preview()" onkeyup="show_preview()"><br>
       <div id="select_ic">&nbsp;</div>
 
       <button
@@ -64,26 +65,6 @@
       <div id="select_bg" style="display: none">&nbsp;</div>
     </div>
 
-    <!-- <button type="button" class="button preview" onclick="toggle_preview()">Toggle preview</button>  -->
-    <!-- <label for="modal_1" class="button success">Import</label>  -->
-    <!-- <label for="modal_2" class="button warning">What's Santa Soaked?</label> -->
-
-    <div class="modal">
-      <input id="modal_1" type="checkbox">
-      <label for="modal_1" class="overlay"></label>
-      <article>
-        <header>
-          <h3>Import</h3>
-          <label for="modal_1" class="close">×</label>
-        </header>
-        <section class="content">
-          <p>Have a card URL or code from another Open Ecard Generator instance? You can import it and view it here! Just paste the original URL in the box below and press the button to view your card.</p>
-
-          <input type="text" id="import_url" size="25" placeholder="URL or code"><br><button onclick="import_card()">View card!</button>
-        </section>
-      </article>
-    </div>
-
     <div id="card_url">
       <!-- &nbsp; -->
       <a id="shortened_url" href="" target="_blank"></a>
@@ -92,13 +73,6 @@
     <div id="short_url" onClick="copyToClipboard()">
       <a id="shortened_url" href="" target="_blank"></a>
     </div>
-
-    <!-- <button id="shortenButton">Shorten URL</button>
-    <script>
-      document.getElementById('shortenButton').addEventListener('click', shortenUrl);
-    </script> -->
-  <!-- <div id="shortened_url"></div> -->
-  <!-- <a id="shortened_url" href="" target="_blank"></a> -->
 
     <br>
     <div id="preview_container">
@@ -112,8 +86,5 @@
         </div>
       </div>
     </div>
-    <!-- <footer>
-      <a href="https://santasoaked.net/">Back to SantaSoaked.net</a>
-    </footer> -->
   </body>
 </html>

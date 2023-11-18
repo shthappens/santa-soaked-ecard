@@ -49,8 +49,8 @@ function load_pattern() {
 
 function load_icon() {
   icon_menu = document.getElementById("icon_menu");
-  // ic = "https://dohliam.github.io/elegant-circles/svg/" + icon_menu.value + ".svg";
-  ic = "https://shthappens.github.io/santa-soaked-ecard/images/" + icon_menu.value + ".jpeg";
+  // ic = "https://shthappens.github.io/santa-soaked-ecard/images/" + icon_menu.value + ".jpeg";
+  ic = "./images/" + icon_menu.value + ".jpeg";
   if (icon_menu.value == "Select Image") { ic = "" }
   document.getElementById("image_url").value = ic;
   return ic;

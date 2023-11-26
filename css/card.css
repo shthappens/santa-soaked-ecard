@@ -54,7 +54,9 @@ body .modal article section.content{
 }
 
 #home-image{
-  background-image:  url("../Santa_Soaked_Promo.gif");
+  /* background-image:  url("../Santa_Soaked_Promo.gif"); */
+  background-image:  url("../Santa-take-the-plunge.gif");
+  /* background-image:  url("../Santa-take-the-plunge-smaller.gif"); */
   background-size: contain;
   height: 450px;
   background-repeat: no-repeat;
